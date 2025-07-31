@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Dancing+Script:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Nová paleta tmavě zelené barvy */
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-200: #bbf7d0;
+  --color-green-300: #86efac;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-green-800: #166534;
+  --color-green-900: #14532d;
+  --color-green-950: #052e16;
+
+  /* Nová paleta béžové barvy */
+  --color-beige-50: #fdfcf9;
+  --color-beige-100: #f9f5e9;
+  --color-beige-200: #f2eada;
+  --color-beige-300: #e9dcc1;
+  --color-beige-400: #dcc5a1;
+  --color-beige-500: #d0ae81;
+  --color-beige-600: #c19a67;
+  --color-beige-700: #a98050;
+  --color-beige-800: #916b3f;
+  --color-beige-900: #785836;
+  --color-beige-950: #422f1d;
+
+  --font-family-serif: 'Playfair Display', serif;
+  --font-family-sans: 'Inter', sans-serif;
+}
+
+@layer base {
+  body {
+    /* Aktualizovaný gradient pozadí na zelenou a béžovou */
+    background-image: linear-gradient(to bottom right, var(--color-green-50), var(--color-beige-100), var(--color-green-100));
+    font-family: var(--font-family-sans);
+    color: #1f2937; /* text-gray-800 */
+  }
+
+  #root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+@layer components {
+  .wedding-card {
+    /* Rámeček karty aktualizován na jemnou zelenou */
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(187, 247, 208, 0.5); /* border-green-200/50 */
+    border-radius: 1rem; /* rounded-2xl */
+    box-shadow: 0 10px 15px -3px rgba(16, 163, 74, 0.1), 0 4px 6px -4px rgba(16, 163, 74, 0.1); /* shadow-lg */
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .wedding-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(16, 128, 61, 0.15), 0 8px 10px -6px rgba(16, 128, 61, 0.15); /* shadow-xl */
+    transform: translateY(-0.25rem); /* -translate-y-1 */
+  }
+
+  .wedding-button {
+    /* Tlačítko aktualizováno na gradient tmavě zelené */
+    background-image: linear-gradient(to right, var(--color-green-600), var(--color-green-800));
+    color: #fff;
+    padding-left: 1.5rem;
+  .wedding-button-outline {
+    /* Obrysové tlačítko aktualizováno na zelené barvy */
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--color-green-700);
+  .subtle-gradient {
+    /* Přejmenováno z .romantic-gradient a aktualizováno na nové barvy */
+    background-image: linear-gradient(to right, var(--color-beige-100), var(--color-green-50), var(--color-beige-200));
+  }
+    padding-bottom: 0.75rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    background: transparent;
+    transition: background 0.3s;
+    transition-property: background;
+    transition-duration: 300ms;
+    cursor: pointer;
+  }
+  .wedding-button-outline:hover {
+    background: var(--color-green-50);
+  }
+    font-weight: 500;
+    box-shadow: 0 10px 15px -3px rgba(16, 163, 74, 0.2), 0 4px 6px -4px rgba(16, 163, 74, 0.2);
+    transition: box-shadow 0.3s, transform 0.3s;
+    transition-property: box-shadow, transform;
+    transition-duration: 300ms;
+    cursor: pointer;
+  }
+  .wedding-button:hover {
+    box-shadow: 0 20px 25px -5px rgba(16, 128, 61, 0.25), 0 8px 10px -6px rgba(16, 128, 61, 0.25);
+    transform: scale(1.05);
+  }
+
+  .wedding-button-outline {
+    /* Obrysové tlačítko aktualizováno na zelené barvy */
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--color-green-700);
+    color: var(--color-green-800);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    background: transparent;
+    transition: background 0.3s;
+    transition-property: background;
+    transition-duration: 300ms;
+    cursor: pointer;
+  }
+  .wedding-button-outline:hover {
+    background: var(--color-green-50);
+  }
+
+  .subtle-gradient {
+    /* Přejmenováno z .romantic-gradient a aktualizováno na nové barvy */
+    background-image: linear-gradient(to right, var(--color-beige-100), var(--color-green-50), var(--color-beige-200));
+  }
+
+  .accent-gradient {
+    /* Přejmenováno z .gold-accent a aktualizováno na béžový gradient */
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, var(--color-beige-600), var(--color-beige-800));
+  }
+
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+
+  .logo:hover {
+    /* Stín upraven na zelenou barvu */
+    filter: drop-shadow(0 0 2em var(--color-green-600));
+  }
+
+  .logo.react:hover {
+    /* Stín pro React logo upraven na tmavší zelenou */
+    filter: drop-shadow(0 0 2em var(--color-green-800));
+  }
+
+  .card {
+    padding: 2em;
+  }
+
+  .read-the-docs {
+    /* Barva textu upravena na tmavší béžovou */
+    color: var(--color-beige-800);
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
