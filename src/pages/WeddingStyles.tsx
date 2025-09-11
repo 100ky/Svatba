@@ -10,10 +10,12 @@ const harmonogram = [
   { time: "22:00", event: "Volná zábava a půlnoční překvapení", icon: "✨" },
 ];
 
+import Container from "../components/Container";
+
 const WeddingStyles = () => {
   return (
     <div className="pt-8 pb-20">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container maxWidth="3xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-green-900">
             Svatební harmonogram
@@ -41,7 +43,7 @@ const WeddingStyles = () => {
             ))}
           </ul>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

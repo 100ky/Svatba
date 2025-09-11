@@ -25,10 +25,13 @@ const sampleMenu = [
   },
 ];
 
+import Container from "../components/Container";
+import ContentCard from "../components/ContentCard";
+
 const Catering = () => {
   return (
     <div className="pt-8 pb-20">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container maxWidth="3xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-green-900">
             Svatební menu
@@ -61,7 +64,7 @@ const Catering = () => {
             <span className="text-3xl">🥂</span>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

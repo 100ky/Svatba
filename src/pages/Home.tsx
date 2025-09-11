@@ -83,12 +83,14 @@ const FeatureCard = ({ icon: Icon, title, description, link }: FeatureCardProps)
   );
 };
 
+import Container from "../components/Container";
+
 const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-beige-50 to-green-50 text-gray-800">
       <AnimateOnScroll>
         <section className="pt-40 pb-24 px-4 text-center relative overflow-hidden">
-          <div className="max-w-4xl mx-auto relative">
+          <Container maxWidth="4xl" className="relative">
             <h1 className="text-6xl md:text-8xl font-serif font-bold mb-6 text-green-950 leading-tight">
               Svatba Anetky a Toma
             </h1>
@@ -97,12 +99,12 @@ const Home = () => {
               všechny důležité informace.
             </p>
             <LeafCountdown />
-          </div>
+          </Container>
         </section>
       </AnimateOnScroll>
 
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {features.map((feature, index) => (
               <AnimateOnScroll key={feature.link} delay={index * 100}>
@@ -110,18 +112,18 @@ const Home = () => {
               </AnimateOnScroll>
             ))}
           </div>
-        </div>
+        </Container>
       </section>
       
       <section className="py-24 text-center">
-        <div className="max-w-3xl mx-auto">
+        <Container maxWidth="3xl">
             <AnimateOnScroll>
                 <h2 className="text-4xl font-serif text-green-950 mb-4">Těšíme se na vás!</h2>
                 <p className="text-lg text-green-900/80">
                     Vaše přítomnost je pro nás ten největší dar. Doufáme, že si tento den užijete spolu s námi.
                 </p>
             </AnimateOnScroll>
-        </div>
+        </Container>
       </section>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { venues } from '../data/venues';
+import Container from '../components/Container';
 
 const VenueDetail = () => {
     const { venueId } = useParams<{ venueId: string }>();
@@ -13,7 +14,7 @@ const VenueDetail = () => {
                     <p className="text-gray-600 mb-6">Požadované svatební místo neexistuje.</p>
                     <Link
                         to="/venues"
-                        className="bg-gradient-to-r from-pink-400 to-primary-500 text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+                        className="bg-gradient-to-r from-green-400 to-green-500 text-white px-6 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                         Zpět na místa
                     </Link>
@@ -24,12 +25,12 @@ const VenueDetail = () => {
 
     return (
         <div className="min-h-screen pt-8 pb-20">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Container maxWidth="6xl">
                 {/* Back button */}
                 <div className="mb-6">
                     <Link
                         to="/venues"
-                        className="inline-flex items-center text-pink-600 hover:text-pink-700 font-medium"
+                        className="inline-flex items-center text-green-700 hover:text-green-800 font-medium"
                     >
                         <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -39,7 +40,7 @@ const VenueDetail = () => {
                 </div>
 
                 {/* Header */}
-                <div className="bg-white/80 backdrop-blur-sm border border-pink-200/50 rounded-2xl shadow-lg p-8 mb-8">
+                <div className="bg-white/80 backdrop-blur-sm border border-green-200/50 rounded-2xl shadow-lg p-8 mb-8">
                     <div className="flex justify-between items-start mb-6">
                         <div>
                             <h1 className="text-4xl font-serif font-bold text-gray-800 mb-2">{venue.name}</h1>
@@ -49,9 +50,9 @@ const VenueDetail = () => {
                             </p>
                         </div>
                         <div className="text-right">
-                            <div className="bg-gradient-to-r from-pink-50 to-primary-50 p-4 rounded-xl">
+                            <div className="bg-gradient-to-r from-beige-50 to-green-50 p-4 rounded-xl">
                                 <p className="text-sm text-gray-600 mb-1">Základní cena</p>
-                                <p className="text-3xl font-bold text-pink-600">{venue.basePrice.toLocaleString()} Kč</p>
+                                <p className="text-3xl font-bold text-green-700">{venue.basePrice.toLocaleString()} Kč</p>
                                 <p className="text-sm text-gray-500">+ {venue.pricePerPerson.toLocaleString()} Kč/osoba</p>
                             </div>
                         </div>
@@ -92,7 +93,7 @@ const VenueDetail = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* Features */}
-                    <div className="bg-white/80 backdrop-blur-sm border border-pink-200/50 rounded-2xl shadow-lg p-8">
+                    <div className="bg-white/80 backdrop-blur-sm border border-green-200/50 rounded-2xl shadow-lg p-8">
                         <h2 className="text-2xl font-serif font-bold text-gray-800 mb-6 flex items-center">
                             <span className="mr-3">✨</span>
                             Vlastnosti
@@ -108,7 +109,7 @@ const VenueDetail = () => {
                     </div>
 
                     {/* Contact */}
-                    <div className="bg-white/80 backdrop-blur-sm border border-pink-200/50 rounded-2xl shadow-lg p-8">
+                    <div className="bg-white/80 backdrop-blur-sm border border-green-200/50 rounded-2xl shadow-lg p-8">
                         <h2 className="text-2xl font-serif font-bold text-gray-800 mb-6 flex items-center">
                             <span className="mr-3">📞</span>
                             Kontakt
@@ -116,13 +117,13 @@ const VenueDetail = () => {
                         <div className="space-y-4">
                             <div className="flex items-center">
                                 <span className="text-gray-500 w-16">📞</span>
-                                <a href={`tel:${venue.contact.phone}`} className="text-pink-600 hover:text-pink-700 font-medium">
+                                <a href={`tel:${venue.contact.phone}`} className="text-green-700 hover:text-green-800 font-medium">
                                     {venue.contact.phone}
                                 </a>
                             </div>
                             <div className="flex items-center">
                                 <span className="text-gray-500 w-16">📧</span>
-                                <a href={`mailto:${venue.contact.email}`} className="text-pink-600 hover:text-pink-700 font-medium">
+                                <a href={`mailto:${venue.contact.email}`} className="text-green-700 hover:text-green-800 font-medium">
                                     {venue.contact.email}
                                 </a>
                             </div>
@@ -133,7 +134,7 @@ const VenueDetail = () => {
                                         href={`https://${venue.contact.website}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-pink-600 hover:text-pink-700 font-medium"
+                                        className="text-green-700 hover:text-green-800 font-medium"
                                     >
                                         {venue.contact.website}
                                     </a>
@@ -144,7 +145,7 @@ const VenueDetail = () => {
                         <div className="mt-6 pt-6 border-t border-gray-200">
                             <Link
                                 to="/calculator"
-                                className="w-full bg-gradient-to-r from-pink-400 to-primary-500 text-white py-3 px-4 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 text-center block"
+                                className="w-full bg-gradient-to-r from-green-400 to-green-500 text-white py-3 px-4 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 text-center block"
                             >
                                 Přidat do kalkulačky
                             </Link>
@@ -154,7 +155,7 @@ const VenueDetail = () => {
 
                 {/* Reviews */}
                 {venue.reviews.length > 0 && (
-                    <div className="mt-8 bg-white/80 backdrop-blur-sm border border-pink-200/50 rounded-2xl shadow-lg p-8">
+                    <div className="mt-8 bg-white/80 backdrop-blur-sm border border-green-200/50 rounded-2xl shadow-lg p-8">
                         <h2 className="text-2xl font-serif font-bold text-gray-800 mb-6 flex items-center">
                             <span className="mr-3">💬</span>
                             Recenze ({venue.reviews.length})
@@ -188,14 +189,14 @@ const VenueDetail = () => {
                 )}
 
                 {/* Availability */}
-                <div className="mt-8 bg-white/80 backdrop-blur-sm border border-pink-200/50 rounded-2xl shadow-lg p-8">
+                <div className="mt-8 bg-white/80 backdrop-blur-sm border border-green-200/50 rounded-2xl shadow-lg p-8">
                     <h2 className="text-2xl font-serif font-bold text-gray-800 mb-6 flex items-center">
                         <span className="mr-3">📅</span>
                         Dostupné termíny 2026
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {venue.availability.map((date, index) => (
-                            <div key={index} className="bg-gradient-to-r from-pink-50 to-primary-50 p-4 rounded-xl text-center">
+                            <div key={index} className="bg-gradient-to-r from-beige-50 to-green-50 p-4 rounded-xl text-center">
                                 <p className="font-semibold text-gray-800">
                                     {new Date(date).toLocaleDateString('cs-CZ', {
                                         weekday: 'long',
@@ -208,9 +209,7 @@ const VenueDetail = () => {
                         ))}
                     </div>
                 </div>
-            </div>
+            </Container>
         </div>
     );
 };
-
-export default VenueDetail;

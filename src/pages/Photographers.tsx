@@ -1,7 +1,9 @@
+import Container from "../components/Container";
+
 const Photographers = () => {
   return (
     <div className="pt-8 pb-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container maxWidth="4xl">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4 text-green-900">
             Fotokoutek
@@ -24,7 +26,7 @@ const Photographers = () => {
         <div className="text-center text-green-700 mt-12">
           <p>Zde se brzy objeví galerie s vašimi fotografiemi. Děkujeme!</p>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };
