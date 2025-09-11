@@ -11,6 +11,7 @@ const harmonogram = [
 ];
 
 import Container from "../components/Container";
+import ContentCard from "../components/ContentCard";
 
 const WeddingStyles = () => {
   return (
@@ -25,7 +26,7 @@ const WeddingStyles = () => {
             můžete těšit.
           </p>
         </div>
-        <div className="bg-white/70 backdrop-blur-sm border border-green-200/50 rounded-2xl shadow-lg p-8">
+        <ContentCard>
           <ul className="space-y-4">
             {harmonogram.map((item, idx) => (
               <li
@@ -42,7 +43,7 @@ const WeddingStyles = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </ContentCard>
       </Container>
     </div>
   );

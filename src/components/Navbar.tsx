@@ -79,7 +79,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-      </div>
+      </Container>
 
       {menuOpen && (
         <div

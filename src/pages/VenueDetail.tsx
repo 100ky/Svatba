@@ -213,3 +213,4 @@ const VenueDetail = () => {
         </div>
     );
 };
+export default VenueDetail;

@@ -41,7 +41,7 @@ const Catering = () => {
             pochutnáte!
           </p>
         </div>
-        <div className="bg-white/70 backdrop-blur-sm border border-green-200/50 rounded-2xl shadow-lg p-8 space-y-8">
+        <ContentCard className="space-y-8">
           {sampleMenu.map((section, idx) => (
             <div key={idx}>
               <h2 className="text-2xl font-serif font-semibold text-green-800 mb-4 border-b-2 border-green-200 pb-2">
@@ -63,7 +63,8 @@ const Catering = () => {
             </h3>
             <span className="text-3xl">🥂</span>
           </div>
-        </div>
+        </ContentCard>
+    
       </Container>
     </div>
   );

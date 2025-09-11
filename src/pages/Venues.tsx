@@ -1,4 +1,5 @@
 import Container from "../components/Container";
+import ContentCard from "../components/ContentCard";
 
 const Venues = () => {
   return (
@@ -12,7 +13,7 @@ const Venues = () => {
             Náš svatební den oslavíme v malebném prostředí Šípkové stodoly.
           </p>
         </div>
-        <div className="bg-white/70 backdrop-blur-sm border border-green-200/50 rounded-2xl shadow-lg hover:shadow-green-200/40 transition-shadow duration-300 overflow-hidden p-8">
+        <ContentCard className="hover:shadow-green-200/40 transition-shadow duration-300 overflow-hidden p-8">
           <h3 className="text-3xl font-serif font-semibold text-green-900 mb-6 text-center">
             Šípková stodola
           </h3>
@@ -59,8 +60,9 @@ const Venues = () => {
               🗺️ Zobrazit na mapě
             </a>
           </div>
-        </div>
+        </ContentCard>
       </Container>
     </div>
   );
 };
+export default Venues;

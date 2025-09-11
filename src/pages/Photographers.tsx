@@ -1,5 +1,7 @@
 import Container from "../components/Container";
 
+import Button from "../components/Button";
+
 const Photographers = () => {
   return (
     <div className="pt-8 pb-20">
@@ -14,14 +16,16 @@ const Photographers = () => {
           </p>
         </div>
         <div className="flex justify-center mb-8">
-          <a
+          <Button 
+            as="a"
             href="https://1drv.ms/f/c/9a3e2861320591bb/EhF-Q40KnEVDvs6MwBo9CzwBK7a9fkgkb2OWIZUSSDbYpA?e=qOgnek"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-8 py-4 rounded-full text-lg font-semibold bg-green-700 text-white shadow-lg hover:bg-green-800 hover:scale-105 transition-all duration-300"
+            variant="solid"
+            size="lg"
           >
             📤 Nahrát fotku
-          </a>
+          </Button>
         </div>
         <div className="text-center text-green-700 mt-12">
           <p>Zde se brzy objeví galerie s vašimi fotografiemi. Děkujeme!</p>
