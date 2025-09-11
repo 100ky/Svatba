@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import Container from "./Container";
+import Container from "./ui/Container";
 
 const Navbar = () => {
   const location = useLocation();

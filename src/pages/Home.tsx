@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import AnimateOnScroll from "../components/AnimateOnScroll";
-import LeafCountdown from "../components/LeafCountdown";
+import AnimateOnScroll from "../components/ui/AnimateOnScroll";
+import LeafCountdown from "../components/ui/LeafCountdown";
 import {
   HomeIcon,
   CameraIcon,
@@ -62,7 +62,12 @@ interface FeatureCardProps {
   link: string;
 }
 
-const FeatureCard = ({ icon: Icon, title, description, link }: FeatureCardProps) => {
+const FeatureCard = ({
+  icon: Icon,
+  title,
+  description,
+  link,
+}: FeatureCardProps) => {
   return (
     <Link to={link} className="group block h-full">
       <div className="bg-beige-50/50 backdrop-blur-lg border border-green-200/30 rounded-2xl p-8 shadow-lg hover:shadow-green-100 hover:shadow-xl transition-all duration-300 h-full flex flex-col hover:-translate-y-2">
@@ -83,7 +88,7 @@ const FeatureCard = ({ icon: Icon, title, description, link }: FeatureCardProps)
   );
 };
 
-import Container from "../components/Container";
+import Container from "../components/ui/Container";
 
 const Home = () => {
   return (

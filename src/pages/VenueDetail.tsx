@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { venues } from '../data/venues';
-import Container from '../components/Container';
+import Container from "../components/ui/Container";
 
 const VenueDetail = () => {
     const { venueId } = useParams<{ venueId: string }>();

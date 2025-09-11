@@ -1,6 +1,6 @@
-import Container from "../components/Container";
+import Container from "../components/ui/Container";
 
-import Button from "../components/Button";
+import Button from "../components/ui/Button";
 
 const Photographers = () => {
   return (
@@ -16,7 +16,7 @@ const Photographers = () => {
           </p>
         </div>
         <div className="flex justify-center mb-8">
-          <Button 
+          <Button
             as="a"
             href="https://1drv.ms/f/c/9a3e2861320591bb/EhF-Q40KnEVDvs6MwBo9CzwBK7a9fkgkb2OWIZUSSDbYpA?e=qOgnek"
             target="_blank"

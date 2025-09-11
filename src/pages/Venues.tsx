@@ -1,4 +1,4 @@
-import Container from "../components/Container";
+import Container from "../components/ui/Container";
 import ContentCard from "../components/ContentCard";
 
 const Venues = () => {
